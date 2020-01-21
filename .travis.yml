@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install: 
-    - docekr build  -t softqa1993/react-test -f ./client/Dockerfile.dev  ./client
+    - docker build  -t softqa1993/react-test -f ./client/Dockerfile.dev  ./client
 
 script:
     - docker run softqa1993/react-test npm test -- --coverage
