@@ -9,7 +9,7 @@ script:
     - docker run softqa1993/react-test npm test -- --coverage
 
 after_success:
-    - docekr build -t softqa1993/multi-client .client
+    - docker build -t softqa1993/multi-client .client
     - docker build -t softqa1993/multi-nginx ./nginx
     - docker build -t softqa1993/multi-server ./server
     - docker build -t softqa1993/multi-worker ./worker
